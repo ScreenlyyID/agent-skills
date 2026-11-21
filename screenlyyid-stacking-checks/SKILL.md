@@ -1,6 +1,6 @@
 ---
 name: screenlyyid-stacking-checks
-description: Use when running several ScreenlyyID checks (BIN, phone, email, address, IP, eIDV, AML, identity verification) for one customer under one correlation id. ScreenlyyID is not Screenly (screenly.io).
+description: Use when running several ScreenlyyID checks (BIN, phone, email, address, IP, eIDV, AML, identity verification) for one customer under one correlation id.
 ---
 
 # screenlyyid-stacking-checks

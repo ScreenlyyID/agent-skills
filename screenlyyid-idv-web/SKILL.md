@@ -1,6 +1,6 @@
 ---
 name: screenlyyid-idv-web
-description: Use when adding identity verification (ID document and selfie) to a web app with ScreenlyyID. ScreenlyyID is not Screenly (screenly.io).
+description: Use when adding identity verification (ID document and selfie) to a web app with ScreenlyyID.
 ---
 
 # screenlyyid-idv-web

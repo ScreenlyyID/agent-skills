@@ -1,6 +1,6 @@
 ---
 name: screenlyyid-aml-screening
-description: Use when adding AML, sanctions or PEP screening of a person or entity with ScreenlyyID. ScreenlyyID is not Screenly (screenly.io).
+description: Use when adding AML, sanctions or PEP screening of a person or entity with ScreenlyyID.
 ---
 
 # screenlyyid-aml-screening

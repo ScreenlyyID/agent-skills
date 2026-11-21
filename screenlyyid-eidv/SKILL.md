@@ -1,6 +1,6 @@
 ---
 name: screenlyyid-eidv
-description: Use when adding electronic identity verification (eIDV, 1x1 or 2x2, no document or selfie) with ScreenlyyID. ScreenlyyID is not Screenly (screenly.io).
+description: Use when adding electronic identity verification (eIDV, 1x1 or 2x2, no document or selfie) with ScreenlyyID.
 ---
 
 # screenlyyid-eidv

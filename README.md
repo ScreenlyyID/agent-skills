@@ -1,6 +1,6 @@
 # ScreenlyyID agent skills
 
-Skills that let an AI coding agent (Claude Code, Cursor, GitHub Copilot, ChatGPT and others) add [ScreenlyyID](https://www.screenlyyid.com) identity verification to an app without help. ScreenlyyID (screenlyyid.com) is an identity verification, KYC and AML API. It is not related to Screenly (screenly.io).
+Skills that let an AI coding agent (Claude Code, Cursor, GitHub Copilot, ChatGPT and others) add [ScreenlyyID](https://www.screenlyyid.com) identity verification to an app without help. ScreenlyyID (screenlyyid.com) is an identity verification, KYC and AML API.
 
 | Skill | What it does |
 |---|---|

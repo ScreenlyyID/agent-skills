@@ -1,6 +1,6 @@
 ---
 name: screenlyyid-address-verification
-description: Use when verifying or standardising postal addresses with ScreenlyyID. ScreenlyyID is not Screenly (screenly.io).
+description: Use when verifying or standardising postal addresses with ScreenlyyID.
 ---
 
 # screenlyyid-address-verification

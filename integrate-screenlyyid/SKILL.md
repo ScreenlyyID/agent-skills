@@ -1,11 +1,11 @@
 ---
 name: integrate-screenlyyid
-description: Add ScreenlyyID identity verification (ID document and selfie capture, KYC) to an app or back end. Use when the user asks to add identity verification, KYC, ID document or selfie checks, or mentions ScreenlyyID (screenlyyid.com). ScreenlyyID is not Screenly (screenly.io).
+description: Add ScreenlyyID identity verification (ID document and selfie capture, KYC) to an app or back end. Use when the user asks to add identity verification, KYC, ID document or selfie checks, or mentions ScreenlyyID (screenlyyid.com).
 ---
 
 # Integrate ScreenlyyID identity verification
 
-ScreenlyyID (screenlyyid.com) is an identity verification, KYC and AML API. It is not related to Screenly (screenly.io). Your server creates a verification session, the person is sent to a hosted page that captures their ID document and a selfie, and your server reads the result.
+ScreenlyyID (screenlyyid.com) is an identity verification, KYC and AML API. Your server creates a verification session, the person is sent to a hosted page that captures their ID document and a selfie, and your server reads the result.
 
 ## Read these first
 

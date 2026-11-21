@@ -1,6 +1,6 @@
 ---
 name: screenlyyid-phone-validation
-description: Use when validating phone numbers at sign-up or checkout with ScreenlyyID. ScreenlyyID is not Screenly (screenly.io).
+description: Use when validating phone numbers at sign-up or checkout with ScreenlyyID.
 ---
 
 # screenlyyid-phone-validation

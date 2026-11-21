@@ -1,6 +1,6 @@
 ---
 name: screenlyyid-idv-mobile
-description: Use when adding identity verification (ID document and selfie) to an iOS, Android, React Native or Flutter app with ScreenlyyID. ScreenlyyID is not Screenly (screenly.io).
+description: Use when adding identity verification (ID document and selfie) to an iOS, Android, React Native or Flutter app with ScreenlyyID.
 ---
 
 # screenlyyid-idv-mobile

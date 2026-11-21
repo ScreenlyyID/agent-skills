@@ -1,6 +1,6 @@
 ---
 name: screenlyyid-bin-lookup
-description: Use when adding BIN or card checks (card country, type, prepaid) with ScreenlyyID, for example at checkout. ScreenlyyID is not Screenly (screenly.io).
+description: Use when adding BIN or card checks (card country, type, prepaid) with ScreenlyyID, for example at checkout.
 ---
 
 # screenlyyid-bin-lookup

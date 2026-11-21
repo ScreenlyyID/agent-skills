@@ -1,6 +1,6 @@
 ---
 name: screenlyyid-email-validation
-description: Use when validating or verifying email addresses (typos, disposable, mailbox exists) with ScreenlyyID. ScreenlyyID is not Screenly (screenly.io).
+description: Use when validating or verifying email addresses (typos, disposable, mailbox exists) with ScreenlyyID.
 ---
 
 # screenlyyid-email-validation

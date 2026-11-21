@@ -1,6 +1,6 @@
 ---
 name: screenlyyid-device-ip
-description: Use when checking IP addresses, VPN or proxy use, blocklists, host reputation or user agents with ScreenlyyID. ScreenlyyID is not Screenly (screenly.io).
+description: Use when checking IP addresses, VPN or proxy use, blocklists, host reputation or user agents with ScreenlyyID.
 ---
 
 # screenlyyid-device-ip
