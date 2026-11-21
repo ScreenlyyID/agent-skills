@@ -11,6 +11,7 @@ ScreenlyyID (screenlyyid.com) is an identity verification, KYC and AML API. It i
 
 - All developer docs in one file: https://www.screenlyyid.com/docs/llms-full.txt
 - The step-by-step guide for agents: https://www.screenlyyid.com/docs/ai-quickstart/ (Markdown: add `.md`, or send `Accept: text/markdown`)
+- One guide per product (pick the one that matches the request): https://www.screenlyyid.com/docs/guides/ (all guides are listed in https://www.screenlyyid.com/llms.txt)
 - Working examples: https://www.screenlyyid.com/docs/recipes/
 - OpenAPI spec: https://www.screenlyyid.com/openapi.json
 
@@ -26,16 +27,30 @@ Read the docs rather than guessing. Do not invent endpoints, packages, parameter
 
 ## Steps
 
-### 1. Detect the stack
+### 1. Pick the guide, then detect the stack
 
-| Look for | Follow |
+Read https://www.screenlyyid.com/llms.txt, pick the guide that matches the request, read its `.md` version and follow its steps and its "Done when" checklist exactly.
+
+| The developer wants | Guide |
+|---|---|
+| Verify an ID document and selfie in a **mobile app** (iOS, Android, React Native, Flutter) | https://www.screenlyyid.com/docs/guides/identity-verification-mobile/ |
+| Verify an ID document and selfie in a **web app** | https://www.screenlyyid.com/docs/guides/identity-verification-web/ |
+| Card checks at checkout | https://www.screenlyyid.com/docs/guides/bin-lookup/ |
+| Phone, email, address, device or IP checks | https://www.screenlyyid.com/docs/guides/phone-validation/ , https://www.screenlyyid.com/docs/guides/email-validation/ , https://www.screenlyyid.com/docs/guides/address-verification/ , https://www.screenlyyid.com/docs/guides/device-ip-intelligence/ |
+| eIDV or AML screening | https://www.screenlyyid.com/docs/guides/electronic-identity-verification/ , https://www.screenlyyid.com/docs/guides/aml-screening/ |
+| Several checks for one customer | https://www.screenlyyid.com/docs/guides/stacking-checks/ |
+
+Then detect the stack and use the matching recipe for a complete working server:
+
+| Look for | Recipe |
 |---|---|
 | `express` in `package.json` | https://www.screenlyyid.com/docs/recipes/express/ |
 | `next` in `package.json` | https://www.screenlyyid.com/docs/recipes/nextjs/ |
 | `fastapi` in `requirements.txt` or `pyproject.toml` | https://www.screenlyyid.com/docs/recipes/fastapi/ |
-| An Xcode project (`*.xcodeproj`) | https://www.screenlyyid.com/docs/recipes/ios/ and https://www.screenlyyid.com/docs/integrations/mobile-app/ |
-| Any other server stack (Django, Flask, Rails, Go, Java, .NET, PHP, ...) | Translate the Express or FastAPI recipe: it is two HTTP calls. The curl examples are in the AI quickstart. |
-| Android, React Native, Flutter | https://www.screenlyyid.com/docs/integrations/mobile-app/ (WebView and camera permissions). There is no sample app for these yet: say so to the user and test on a real device. |
+| An Xcode project (`*.xcodeproj`) | https://www.screenlyyid.com/docs/recipes/ios/ |
+| Any other server stack (Django, Flask, Rails, Go, Java, .NET, PHP, ...) | Translate the Express or FastAPI recipe: it is two HTTP calls. |
+
+Document and selfie identity verification only goes through the Instance API and the hosted flow. Never use the direct identity verification endpoints (enrolment, liveness, face match, `data/{sessionId}/...`): they are reference only. Every other product can be called on its own or stacked.
 
 ### 2. Get the key
 
@@ -57,7 +72,7 @@ Use the user's existing authentication and database. Do not add a new framework 
 ### 5. Test
 
 - Unit-test the two routes with the ScreenlyyID calls mocked. Assert that `x-api-key` is sent only from the server, that the `CorrelationId` is not in any response to the browser or app, and that another user's verification id returns 404.
-- With a `test_` key, create a verification and confirm the response has `CorrelationId` and `webEnrolmentUrl`. A real capture needs a camera and an ID document, so a human completes that step.
+- With a `test_` key, create a verification and confirm the response has `CorrelationId` and `webEnrolmentUrl`. A real capture needs a camera and an ID document, so a person completes that step.
 
 ### 6. Go live
 

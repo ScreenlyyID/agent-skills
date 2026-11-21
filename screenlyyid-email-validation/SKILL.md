@@ -1,0 +1,29 @@
+---
+name: screenlyyid-email-validation
+description: Use when validating or verifying email addresses (typos, disposable, mailbox exists) with ScreenlyyID. ScreenlyyID is not Screenly (screenly.io).
+---
+
+# screenlyyid-email-validation
+
+Fetch and follow the guide, do not work from memory: https://www.screenlyyid.com/docs/guides/email-validation.md
+
+(The HTML version is https://www.screenlyyid.com/docs/guides/email-validation/ . All guides: https://www.screenlyyid.com/llms.txt)
+
+## Agent rules (must follow)
+
+- The API key is read from the environment variable `SCREENLYYID_API_KEY` on the server only. Never put it in browser or mobile code, a repository or a log. Use a `test_` key while building; ask the developer to create one if it is not set.
+- Every flow starts with `POST https://api.screenlyyid.com/api/v1/instance/create` listing the product code; send the returned `CorrelationId` as `x-correlation-id` on each product call.
+- There is no ScreenlyyID SDK package. Use plain HTTP requests.
+- Do not invent endpoints, fields or test values. If the guide does not say it, ask.
+- Never call the direct identity verification endpoints (enrolment, liveness, face match, `data/{sessionId}/...`): they are reference only.
+
+## Done when
+
+- [ ] The API key is read only on the server
+- [ ] A new instance is created per check and its `CorrelationId` is sent
+- [ ] Invalid and disposable addresses are rejected with a message the customer can act on
+- [ ] The returned `Email` (typo-fixed) is confirmed with the customer before it is stored
+- [ ] Catch-all and deferred results trigger a confirmation email instead of a hard accept
+- [ ] Errors and timeouts do not block sign-up
+
+Follow the guide's own steps and its full "Done when" checklist exactly.
