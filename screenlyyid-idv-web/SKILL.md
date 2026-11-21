@@ -18,6 +18,7 @@ Fetch and follow the guide, do not work from memory: https://www.screenlyyid.com
 - MUST NOT call the result endpoints before `IDV_SESSION_COMPLETE`, and MUST NOT poll. Do not invent an SDK: there is none.
 - Use a `test_` key; ask the developer to create one. The API key is read from `SCREENLYYID_API_KEY` on the server only.
 - MUST embed `webEnrolmentUrl` in an iframe with `allow="camera; microphone"` and check `event.source` and `event.origin` on every message.
+- On a desktop browser the hosted page first shows a QR code so the person can continue on their phone; your page still receives the same `IDV_SESSION_COMPLETE` / `ERROR` messages when the phone finishes, so keep the iframe open. Add `handoff=off` to the `webEnrolmentUrl` to skip the QR code and capture on the desktop.
 
 ## Done when
 

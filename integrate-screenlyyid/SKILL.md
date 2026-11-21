@@ -65,7 +65,7 @@ Use the user's existing authentication and database. Do not add a new framework 
 
 ### 4. Send the person to the hosted page
 
-- **Web:** embed `webEnrolmentUrl` in an iframe with `allow="camera; microphone"`, and listen for `message` events. Only accept a message whose `event.source` is that iframe's `contentWindow` and whose `event.origin` is the hosted page's origin. Messages look like `{ eventName, isError, error }`. See https://www.screenlyyid.com/docs/integrations/web-app/
+- **Web:** embed `webEnrolmentUrl` in an iframe with `allow="camera; microphone"`, and listen for `message` events. Only accept a message whose `event.source` is that iframe's `contentWindow` and whose `event.origin` is the hosted page's origin. Messages look like `{ eventName, isError, error }`. On a desktop browser the page first shows a QR code to continue on a phone (same messages arrive when the phone finishes; add `handoff=off` to the URL to skip it). See https://www.screenlyyid.com/docs/integrations/web-app/
 - **Mobile:** load `webEnrolmentUrl` in a WebView after the app has asked for camera permission, and forward the page's `message` events to the app. See https://www.screenlyyid.com/docs/integrations/mobile-app/ (including the camera permissions section).
 - `IDV_SESSION_COMPLETE` (with `isError` false): ask your server for the result. `ERROR`: the capture failed: offer to try again.
 
