@@ -48,6 +48,7 @@ Then detect the stack and use the matching recipe for a complete working server:
 | `next` in `package.json` | https://www.screenlyyid.com/docs/recipes/nextjs/ |
 | `fastapi` in `requirements.txt` or `pyproject.toml` | https://www.screenlyyid.com/docs/recipes/fastapi/ |
 | An Xcode project (`*.xcodeproj`) | https://www.screenlyyid.com/docs/recipes/ios/ |
+| An Android project (`build.gradle` or `build.gradle.kts` with `com.android.application`, or `AndroidManifest.xml`) | https://www.screenlyyid.com/docs/recipes/android/ |
 | Any other server stack (Django, Flask, Rails, Go, Java, .NET, PHP, ...) | Translate the Express or FastAPI recipe: it is two HTTP calls. |
 
 Document and selfie identity verification only goes through the Instance API and the hosted flow. Never use the direct identity verification endpoints (enrolment, liveness, face match, `data/{sessionId}/...`): they are reference only. Every other product can be called on its own or stacked.

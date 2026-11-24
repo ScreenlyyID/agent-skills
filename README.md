@@ -5,7 +5,7 @@ Skills that let an AI coding agent (Claude Code, Cursor, GitHub Copilot, ChatGPT
 | Skill | What it does |
 |---|---|
 | [`integrate-screenlyyid`](integrate-screenlyyid/SKILL.md) | General entry point: picks the right guide, detects the app's stack, then adds the server routes, the hosted capture page and the result handling. |
-| [`screenlyyid-idv-mobile`](screenlyyid-idv-mobile/SKILL.md) | Identity verification in an iOS, Android, React Native or Flutter app. |
+| [`screenlyyid-idv-mobile`](screenlyyid-idv-mobile/SKILL.md) | Identity verification in an iOS, Android, React Native or Flutter app (with native iOS and Android examples). |
 | [`screenlyyid-idv-web`](screenlyyid-idv-web/SKILL.md) | Identity verification in a web app. |
 | [`screenlyyid-bin-lookup`](screenlyyid-bin-lookup/SKILL.md) | BIN and card checks at checkout. |
 | [`screenlyyid-phone-validation`](screenlyyid-phone-validation/SKILL.md) | Phone validation. |

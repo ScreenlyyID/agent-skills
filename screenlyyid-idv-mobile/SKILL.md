@@ -9,6 +9,8 @@ Fetch and follow the guide, do not work from memory: https://www.screenlyyid.com
 
 (The HTML version is https://www.screenlyyid.com/docs/guides/identity-verification-mobile/ . All guides: https://www.screenlyyid.com/llms.txt)
 
+Working native examples, each with a small back end: iOS (Swift) https://www.screenlyyid.com/docs/recipes/ios/ and Android (Kotlin) https://www.screenlyyid.com/docs/recipes/android/ . Their repos are https://github.com/ScreenlyyID/ios-sdk-example and https://github.com/ScreenlyyID/android-sdk-example .
+
 ## Agent rules (must follow)
 
 - MUST create the instance on the server (`POST /api/v1/instance/create`, `GlobalScreening: ["idv"]`) and store the `CorrelationId` per user.
@@ -16,6 +18,7 @@ Fetch and follow the guide, do not work from memory: https://www.screenlyyid.com
 - MUST use the exact event names `IDV_SESSION_COMPLETE` and `ERROR` with the `{eventName, isError, error}` format, and treat `ERROR` as a restartable failure.
 - MUST NOT build a custom camera, upload, liveness or face-match flow, and MUST NOT call the direct identity verification endpoints (enrolment, liveness, face match, `data/{sessionId}/...`) even if asked: they are reference only.
 - MUST NOT call the result endpoints before `IDV_SESSION_COMPLETE`, and MUST NOT poll. Do not invent an SDK: there is none.
+- On Android, MUST grant the page's camera request in `WebChromeClient.onPermissionRequest` (only to ScreenlyyID pages) in addition to holding the `CAMERA` permission, and MUST forward the page's `message` events with `addJavascriptInterface` plus an injected listener: a `WebView` has no outer page to receive `postMessage`.
 - Use a `test_` key; ask the developer to create one. The API key is read from `SCREENLYYID_API_KEY` on the server only.
 
 ## Done when
